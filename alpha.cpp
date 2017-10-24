@@ -36,7 +36,7 @@ struct tree_node
 	variable_node *variable;	// pointer to the corresponding variable if needed
 }; // tree_node declaration
 
-void initialize();
+void initialize(void);
 // initializes global variables, opens the input/output streams
 // called from main
 int syntactic_unit(string &unit);
@@ -56,7 +56,10 @@ void empty_expression_tree(tree_node *root);
 // uses recursion to empty the expression tree
 // called from main
 
-int main()
+/**
+ * @brief 
+ */
+int main(int argc, char *argv[])
 {
 	int code;	// stores the code of the current syntactic unit
 	string unit;	// stores the current syntactic unit
