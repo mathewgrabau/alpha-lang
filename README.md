@@ -37,6 +37,8 @@ The alpha language is fairly simple. The most basic operation is creating a vari
 NOTE: The interpretor will output the claim "{VARNAME} is assigned {VALUE}" each time a given variable is assigned a value.
 
 
+
+
 ## Running Your Applications
 
 The name of the source file is 

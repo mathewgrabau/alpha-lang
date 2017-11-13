@@ -1,6 +1,15 @@
 #include "VariableNode.hpp"
 
+#include <string>
+
 VariableNode::VariableNode(std::string &name)
+{
+	this->name = name;
+	this->value = 0;
+	this->assigned = false;
+}
+
+VariableNode::VariableNode(char *name)
 {
 	this->name = name;
 	this->value = 0;
@@ -27,7 +36,7 @@ VariableNode::~VariableNode(void)
 	}
 }
 
-VariableNode * VariableNode::Insert(std::string &name)
+VariableNode * VariableNode::insert(std::string &name)
 {
 	VariableNode * new_node;
 	VariableNode * current;
@@ -56,4 +65,9 @@ VariableNode * VariableNode::Insert(std::string &name)
 	
 
 	new_node = new VariableNode(name);
+}
+
+std::string& VariableNode::get_name(void) 
+{
+	return this->name;
 }
