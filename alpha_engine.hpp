@@ -22,7 +22,7 @@ class AlphaEngine
 		/**
 		 * Destructor
 		 */
-		void ~AlphaEngine(void);
+		~AlphaEngine(void);
 		/**
 		 * Add a string of input to the applications.
 		 */
