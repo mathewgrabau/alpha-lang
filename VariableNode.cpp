@@ -1,6 +1,7 @@
 #include "VariableNode.hpp"
 
 #include <string>
+#include <iostream>
 
 VariableNode::VariableNode(std::string &name)
 {
@@ -65,9 +66,12 @@ VariableNode * VariableNode::insert(std::string &name)
 	
 
 	new_node = new VariableNode(name);
+	// TOOD finish porting this function
+	return new_node;
 }
 
 std::string& VariableNode::get_name(void) 
 {
+	std::cout << "Inside get_name";
 	return this->name;
 }

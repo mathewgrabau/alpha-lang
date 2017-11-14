@@ -1,9 +1,11 @@
-#define CATCH_CONFIG_MAIN	// This tells Catch to provide a main() - only do this in one cpp file.
+#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 
 #include "VariableNode.hpp"
 
 TEST_CASE("Variable nodes have names", "[name]") {
-	REQUIRE(VariableNode("Dummy").get_name() == "Dummy");
+	VariableNode node("name");
+	auto name = node.get_name();
+	REQUIRE(name == "name");
 }
 
